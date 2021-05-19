@@ -2,3 +2,28 @@
 2021-05-19 18:33:37.882 +06:00 [INF] Application is Starting up
 2021-05-19 18:36:49.972 +06:00 [INF] Application is Starting up
 2021-05-19 18:40:15.577 +06:00 [INF] Application is Starting up
+2021-05-19 19:46:08.994 +06:00 [INF] Application is Starting up
+2021-05-19 19:57:57.689 +06:00 [INF] Application is Starting up
+2021-05-19 19:58:00.350 +06:00 [WRN] 'AddEntityFramework*' was called on the service provider, but 'UseInternalServiceProvider' wasn't called in the DbContext options configuration. Remove the 'AddEntityFramework*' call as in most cases it's not needed and might cause conflicts with other products and services registered in the same service provider.
+2021-05-19 19:58:09.608 +06:00 [WRN] Invalid password for user 8497fd62-446b-45f7-998f-c2264c6f3e54.
+2021-05-19 19:58:09.610 +06:00 [WRN] User 8497fd62-446b-45f7-998f-c2264c6f3e54 failed to provide the correct password.
+2021-05-19 19:58:14.398 +06:00 [WRN] Invalid password for user 8497fd62-446b-45f7-998f-c2264c6f3e54.
+2021-05-19 19:58:14.399 +06:00 [WRN] User 8497fd62-446b-45f7-998f-c2264c6f3e54 failed to provide the correct password.
+2021-05-19 20:38:38.223 +06:00 [INF] Application is Starting up
+2021-05-19 20:38:41.328 +06:00 [WRN] 'AddEntityFramework*' was called on the service provider, but 'UseInternalServiceProvider' wasn't called in the DbContext options configuration. Remove the 'AddEntityFramework*' call as in most cases it's not needed and might cause conflicts with other products and services registered in the same service provider.
+2021-05-19 20:38:53.297 +06:00 [INF] User logged in.
+2021-05-19 20:39:05.853 +06:00 [INF] User logged in.
+2021-05-19 20:39:27.567 +06:00 [WRN] Invalid password for user 8497fd62-446b-45f7-998f-c2264c6f3e54.
+2021-05-19 20:39:27.568 +06:00 [WRN] User 8497fd62-446b-45f7-998f-c2264c6f3e54 failed to provide the correct password.
+2021-05-19 20:39:29.937 +06:00 [WRN] Invalid password for user 8497fd62-446b-45f7-998f-c2264c6f3e54.
+2021-05-19 20:39:29.938 +06:00 [WRN] User 8497fd62-446b-45f7-998f-c2264c6f3e54 failed to provide the correct password.
+2021-05-19 20:39:31.819 +06:00 [WRN] Invalid password for user 8497fd62-446b-45f7-998f-c2264c6f3e54.
+2021-05-19 20:39:31.819 +06:00 [WRN] User 8497fd62-446b-45f7-998f-c2264c6f3e54 failed to provide the correct password.
+2021-05-19 20:48:19.418 +06:00 [INF] Application is Starting up
+2021-05-19 20:48:22.244 +06:00 [WRN] 'AddEntityFramework*' was called on the service provider, but 'UseInternalServiceProvider' wasn't called in the DbContext options configuration. Remove the 'AddEntityFramework*' call as in most cases it's not needed and might cause conflicts with other products and services registered in the same service provider.
+2021-05-19 20:48:29.912 +06:00 [WRN] Invalid password for user 8497fd62-446b-45f7-998f-c2264c6f3e54.
+2021-05-19 20:48:29.913 +06:00 [WRN] User 8497fd62-446b-45f7-998f-c2264c6f3e54 failed to provide the correct password.
+2021-05-19 20:48:32.541 +06:00 [WRN] Invalid password for user 8497fd62-446b-45f7-998f-c2264c6f3e54.
+2021-05-19 20:48:32.541 +06:00 [WRN] User 8497fd62-446b-45f7-998f-c2264c6f3e54 failed to provide the correct password.
+2021-05-19 20:48:34.927 +06:00 [WRN] Invalid password for user 8497fd62-446b-45f7-998f-c2264c6f3e54.
+2021-05-19 20:48:34.928 +06:00 [WRN] User 8497fd62-446b-45f7-998f-c2264c6f3e54 failed to provide the correct password.
