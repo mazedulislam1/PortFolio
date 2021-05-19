@@ -13,7 +13,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "UnitTests", "{
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MdC.SocialNetWork.Core.Tests", "MdC.SocialNetWork.Core.Tests\MdC.SocialNetWork.Core.Tests.csproj", "{0A348BA0-7BDE-404C-9863-1D5A633C8345}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MdC.SocialNetwork.Web", "MdC.SocialNetwork.Web\MdC.SocialNetwork.Web.csproj", "{64DF2248-B531-4DF1-AD53-129FC4B95FDE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MdC.SocialNetwork.Web", "MdC.SocialNetwork.Web\MdC.SocialNetwork.Web.csproj", "{6E83C3CB-68FA-42A1-B35B-4014A6DF6261}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,10 +33,10 @@ Global
 		{0A348BA0-7BDE-404C-9863-1D5A633C8345}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0A348BA0-7BDE-404C-9863-1D5A633C8345}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0A348BA0-7BDE-404C-9863-1D5A633C8345}.Release|Any CPU.Build.0 = Release|Any CPU
-		{64DF2248-B531-4DF1-AD53-129FC4B95FDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{64DF2248-B531-4DF1-AD53-129FC4B95FDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{64DF2248-B531-4DF1-AD53-129FC4B95FDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{64DF2248-B531-4DF1-AD53-129FC4B95FDE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E83C3CB-68FA-42A1-B35B-4014A6DF6261}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E83C3CB-68FA-42A1-B35B-4014A6DF6261}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E83C3CB-68FA-42A1-B35B-4014A6DF6261}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E83C3CB-68FA-42A1-B35B-4014A6DF6261}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
