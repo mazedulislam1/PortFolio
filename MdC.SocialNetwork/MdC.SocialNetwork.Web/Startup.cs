@@ -34,7 +34,8 @@ namespace MdC.SocialNetwork
             services.AddIdentity<IdentityUser, IdentityRole>(options =>
                 options.SignIn.RequireConfirmedAccount = false)
                     .AddEntityFrameworkStores<ApplicationDbContext>()
-                    .AddDefaultTokenProviders();
+                    .AddDefaultTokenProviders()
+                    .AddDefaultUI();
 
             services.AddControllersWithViews();
             services.AddRazorPages();
