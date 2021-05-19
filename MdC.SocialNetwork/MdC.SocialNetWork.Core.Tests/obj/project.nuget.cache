@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zUzzp68086eTyNteRs/kxmecIbdlwAcCpiT04j+z2ZP4SNtNAKi+xQQ/MRSPhvSbKKiPrIfOIM/N1/rE2mHFDg==",
+  "dgSpecHash": "jXjmUS7QWfLzuDHhr8X/FO85Twl7xV8zp7BjYB7oq95GnMiH6knoB5sriSwB5mQVxbGUnphWHpBixeSS/4/4ng==",
   "success": true,
-  "projectFilePath": "E:\\Project Source\\MdC.SocialNetwork\\MdC.SocialNetWork.Core.Tests\\MdC.SocialNetWork.Core.Tests.csproj",
+  "projectFilePath": "E:\\Project Source\\PortFolio\\MdC.SocialNetwork\\MdC.SocialNetWork.Core.Tests\\MdC.SocialNetWork.Core.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\M\\.nuget\\packages\\microsoft.codecoverage\\16.5.0\\microsoft.codecoverage.16.5.0.nupkg.sha512",
     "C:\\Users\\M\\.nuget\\packages\\microsoft.csharp\\4.0.1\\microsoft.csharp.4.0.1.nupkg.sha512",

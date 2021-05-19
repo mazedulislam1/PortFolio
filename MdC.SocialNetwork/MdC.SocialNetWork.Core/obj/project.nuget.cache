@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wazbbvRkplY0ibaqOg4J7/mjkQgwROkiEyiSSeKUTZjnNz+64C1F8TFFfpGNONIpp8KKizSpXc3ZsYeDv8xgng==",
+  "dgSpecHash": "BX3WdomdgKRTMvueCHYe6l+K8iNYe3ScFASIelF+pyQLOFf9cUgZqJvvg2iHPJCBErV59M2gMltYhSgegPVmog==",
   "success": true,
-  "projectFilePath": "E:\\Project Source\\MdC.SocialNetwork\\MdC.SocialNetWork.Core\\MdC.SocialNetWork.Core.csproj",
+  "projectFilePath": "E:\\Project Source\\PortFolio\\MdC.SocialNetwork\\MdC.SocialNetWork.Core\\MdC.SocialNetWork.Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\M\\.nuget\\packages\\autofac\\6.0.0\\autofac.6.0.0.nupkg.sha512",
     "C:\\Users\\M\\.nuget\\packages\\autofac.extensions.dependencyinjection\\7.1.0\\autofac.extensions.dependencyinjection.7.1.0.nupkg.sha512",

@@ -5769,11 +5769,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Project Source\\MdC.SocialNetwork\\MdC.SocialNetWork.Core\\MdC.SocialNetWork.Core.csproj",
+      "projectUniqueName": "E:\\Project Source\\PortFolio\\MdC.SocialNetwork\\MdC.SocialNetWork.Core\\MdC.SocialNetWork.Core.csproj",
       "projectName": "MdC.SocialNetWork.Core",
-      "projectPath": "E:\\Project Source\\MdC.SocialNetwork\\MdC.SocialNetWork.Core\\MdC.SocialNetWork.Core.csproj",
+      "projectPath": "E:\\Project Source\\PortFolio\\MdC.SocialNetwork\\MdC.SocialNetWork.Core\\MdC.SocialNetWork.Core.csproj",
       "packagesPath": "C:\\Users\\M\\.nuget\\packages\\",
-      "outputPath": "E:\\Project Source\\MdC.SocialNetwork\\MdC.SocialNetWork.Core\\obj\\",
+      "outputPath": "E:\\Project Source\\PortFolio\\MdC.SocialNetwork\\MdC.SocialNetWork.Core\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\M\\AppData\\Roaming\\NuGet\\NuGet.Config",
