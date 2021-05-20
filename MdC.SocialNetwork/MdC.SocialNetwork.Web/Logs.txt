@@ -312,3 +312,9 @@ System.InvalidOperationException: Unable to resolve service for type 'Microsoft.
 2021-05-20 03:45:20.784 +06:00 [WRN] 'AddEntityFramework*' was called on the service provider, but 'UseInternalServiceProvider' wasn't called in the DbContext options configuration. Remove the 'AddEntityFramework*' call as in most cases it's not needed and might cause conflicts with other products and services registered in the same service provider.
 2021-05-20 03:46:14.551 +06:00 [INF] User logged in.
 2021-05-20 03:46:25.943 +06:00 [INF] User logged in.
+2021-05-20 13:05:40.286 +06:00 [INF] Application is Starting up
+2021-05-20 13:05:44.771 +06:00 [WRN] 'AddEntityFramework*' was called on the service provider, but 'UseInternalServiceProvider' wasn't called in the DbContext options configuration. Remove the 'AddEntityFramework*' call as in most cases it's not needed and might cause conflicts with other products and services registered in the same service provider.
+2021-05-20 13:07:34.148 +06:00 [INF] Application is Starting up
+2021-05-20 13:07:37.765 +06:00 [WRN] 'AddEntityFramework*' was called on the service provider, but 'UseInternalServiceProvider' wasn't called in the DbContext options configuration. Remove the 'AddEntityFramework*' call as in most cases it's not needed and might cause conflicts with other products and services registered in the same service provider.
+2021-05-20 13:07:59.793 +06:00 [INF] User created a new account with password.
+2021-05-20 13:08:19.168 +06:00 [INF] User logged in.
