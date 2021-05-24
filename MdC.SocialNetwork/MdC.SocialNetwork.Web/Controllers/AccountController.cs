@@ -34,6 +34,7 @@ namespace MdC.SocialNetwork.Web.Controllers
         }
 
         [HttpGet]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Login(string returnUrl = null)
         {
             var model = new LoginModel();
@@ -50,8 +51,10 @@ namespace MdC.SocialNetwork.Web.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Login(LoginModel model)
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Login(AccountViewModel accountViewModel)
         {
+            var model = accountViewModel.LoginModel;
             model.ReturnUrl = model.ReturnUrl ?? Url.Content("~/");
 
             if (ModelState.IsValid)
@@ -94,8 +97,10 @@ namespace MdC.SocialNetwork.Web.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Register(RegisterModel model)
+        public async Task<IActionResult> Register(AccountViewModel accountViewModel)
         {
+            var model = accountViewModel.RegisterModel;
+
             model.ReturnUrl = model.ReturnUrl ?? Url.Content("~/");
             model.ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             if (ModelState.IsValid)
@@ -139,6 +144,22 @@ namespace MdC.SocialNetwork.Web.Controllers
         public IActionResult ConfirmEmail()
         {
             return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult> Logout(string returnUrl = null)
+        
+        {
+            await _signInManager.SignOutAsync();
+            _logger.LogInformation("User logged out.");
+            if (returnUrl != null)
+            {
+                return LocalRedirect(returnUrl);
+            }
+            else
+            {
+                return RedirectToAction("Index", "Home");
+                //return RedirectToPage();
+            }
         }
     }
 }

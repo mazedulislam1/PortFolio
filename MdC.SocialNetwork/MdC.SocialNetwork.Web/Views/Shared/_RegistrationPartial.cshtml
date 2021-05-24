@@ -1,0 +1,32 @@
+﻿@using MdC.SocialNetwork.Web.Models
+@model AccountViewModel
+    <div class="col-md-6 world-map-area ">
+        <div class="world-map-image">
+            <img src="~/img/world-map.png" />
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="content-aside">
+            <div class="registration-area">
+                <form asp-route-returnUrl="RegisterModel.ReturnUrl" asp-action="Register" method="post">
+                    <h3>Create a new account.</h3>
+                    <div class="form-group">
+                        <label asp-for="RegisterModel.Email"></label>
+                        <input asp-for="RegisterModel.Email" class="form-control" />
+                        <span asp-validation-for="RegisterModel.Email" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="RegisterModel.Password"></label>
+                        <input asp-for="RegisterModel.Password" class="form-control" />
+                        <span asp-validation-for="RegisterModel.Password" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="RegisterModel.ConfirmPassword"></label>
+                        <input asp-for="RegisterModel.ConfirmPassword" class="form-control" />
+                        <span asp-validation-for="RegisterModel.ConfirmPassword" class="text-danger"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
