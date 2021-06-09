@@ -1,5 +1,4 @@
-﻿@using BdA.SocialNetwork.Web.Models
-@model AccountViewModel
+﻿
 @using Microsoft.AspNetCore.Identity
 @inject SignInManager<IdentityUser> SignInManager
 @inject UserManager<IdentityUser> UserManager
@@ -21,8 +20,8 @@
                             </li>
                             <li>
                                 <form class="form-inline" asp-controller="Account" asp-action="Logout"
-                                        asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })"
-                                        method="post">
+                                      asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })"
+                                      method="post">
                                     <button type="submit" class="nav-link btn btn-link text-white">Logout</button>
                                 </form>
                             </li>
@@ -32,40 +31,10 @@
 
                 else
                 {
-                @Html.AntiForgeryToken()
-                <div class="login-area">
-                    <form asp-controller="Account" asp-action="Login" method="post">
-                        <table cellspacing="0" role="presentation">
-                            <tbody>
-                                <tr class="login-tr-area">
-                                    <td class="">
-                                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                                    </td>
-                                    <td class="email-box">
-                                        <div class="form-group">
-                                            <input asp-for="LoginModel.Email" class="form-control" placeholder="Email" />
-                                            <span asp-validation-for="LoginModel.Email" class="text-danger"></span>
-                                        </div>
-                                    </td>
-                                    <td class="password-box">
-                                        <div class="form-group">
-                                            <input asp-for="LoginModel.Password" class="form-control" placeholder="Password" />
-                                            <span asp-validation-for="LoginModel.Password" class="text-danger"></span>
-                                        </div>
-                                    </td>
-                                    <td class="">
-                                        <div class="form-group">
-                                            <button type="submit" class="btn btn-primary login-submit-btn">Log in</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </form>
-                </div>
+                    <partial name="_LoginPartial.cshtml" />
                 }
             </div>
-            </div>
+        </div>
     </div>
 </div>
 

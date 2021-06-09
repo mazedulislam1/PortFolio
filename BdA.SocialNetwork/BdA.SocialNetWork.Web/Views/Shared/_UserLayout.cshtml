@@ -42,29 +42,55 @@
         <partial name="_HeaderPartial.cshtml">
     </header>
     <!-- End Header -->
+    <div class="pt-90"></div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3">
+                <aside>
+                    <div class="sideber-area">
+                        <div class="left-sidebar">
+                            <div class="section-title">
+                                <h6>Hello @User.Identity.Name!</h6>
+                            </div>
+                            <img src="~/img/left-sidebar.png" />
+                        </div>
+                    </div>
+                </aside>
+            </div>
+            <div class="col-md-6">
+                <main id="main">
+                    @RenderBody()
+                </main><!-- End #main -->
+            </div>
+            <div class="col-md-3">
+                <aside>
+                    <div class="sideber-area">
+                        <div class="right-sidebar">
+                            <img src="~/img/right-sidebar.png" />
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+        <a href="#" class="back-to-top"><i class="bx bx-up-arrow-alt"></i></a>
 
-    <main id="main">
-        @RenderBody()
-    </main><!-- End #main -->
+        <!-- Vendor JS Files -->
+        <script src="~/vendor/jquery/jquery.min.js"></script>
+        <script src="~/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="~/vendor/jquery.easing/jquery.easing.min.js"></script>
+        <script src="~/vendor/php-email-form/validate.js"></script>
+        <script src="~/vendor/waypoints/jquery.waypoints.min.js"></script>
+        <script src="~/vendor/counterup/counterup.min.js"></script>
+        <script src="~/vendor/owl.carousel/owl.carousel.min.js"></script>
+        <script src="~/vendor/aos/aos.js"></script>
 
-    <a href="#" class="back-to-top"><i class="bx bx-up-arrow-alt"></i></a>
+        <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+        <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
 
-    <!-- Vendor JS Files -->
-    <script src="~/vendor/jquery/jquery.min.js"></script>
-    <script src="~/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="~/vendor/jquery.easing/jquery.easing.min.js"></script>
-    <script src="~/vendor/php-email-form/validate.js"></script>
-    <script src="~/vendor/waypoints/jquery.waypoints.min.js"></script>
-    <script src="~/vendor/counterup/counterup.min.js"></script>
-    <script src="~/vendor/owl.carousel/owl.carousel.min.js"></script>
-    <script src="~/vendor/aos/aos.js"></script>
-
-    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
-    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
-
-    <!-- Template Main JS File -->
-    <script src="~/js/main.js"></script>
-    @RenderSection("Scripts", required: false)
+        <!-- Template Main JS File -->
+        <script src="~/js/main.js"></script>
+        @RenderSection("Scripts", required: false)
 
 
 </body>

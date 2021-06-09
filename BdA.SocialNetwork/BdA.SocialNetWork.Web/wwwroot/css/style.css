@@ -262,6 +262,16 @@ h1, h2, h3, h4, h5, h6 {
         content: "\ea9d";
     }
 }
+/* padding*/
+.pt-30 {
+    padding-top: 30px
+}
+.pt-50 {
+    padding-top: 50px
+}
+.pt-90 {
+    padding-top: 90px
+}
 
 /* Get Startet Button */
 .get-started-btn {
@@ -1645,3 +1655,29 @@ header .nav-signed-in-right {
     header .nav-signed-in-right a {
         margin-right: 25px;
     }
+
+    /* USER SECTION*/
+
+/*User Layout*/
+/*sidebar area*/
+.left-sidebar{
+    position: fixed;
+}
+/* main content */
+
+
+
+/*post status*/
+.post-status textarea {
+    width: 100%;
+}
+
+/*News feed*/
+.feed-item-header {
+    padding: 25px 0;
+}
+.feed-item-header img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
