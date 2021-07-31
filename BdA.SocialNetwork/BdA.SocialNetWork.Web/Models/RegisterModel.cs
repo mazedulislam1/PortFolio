@@ -13,6 +13,18 @@ namespace BdA.SocialNetwork.Web.Models
 
         public IList<AuthenticationScheme> ExternalLogins { get; set; }
 
+        //[Required] thakle na input dile modelstate false ashbe
+        [Display(Name = "First Name")]
+        public string FirstName { get; set; }
+
+        //[Required]
+        [Display(Name = "Last Name")]
+        public string LastName { get; set; }
+
+        //[Required]
+        [Display(Name = "Gender")]
+        public string Gender { get; set; }
+        
         [Required]
         [EmailAddress]
         [Display(Name = "Email")]

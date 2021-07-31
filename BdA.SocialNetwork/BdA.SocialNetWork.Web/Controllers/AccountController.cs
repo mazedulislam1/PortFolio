@@ -103,6 +103,7 @@ namespace BdA.SocialNetwork.Web.Controllers
 
             model.ReturnUrl = model.ReturnUrl ?? Url.Content("~/");
             model.ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
+
             if (ModelState.IsValid)
             {
                 var user = new IdentityUser { UserName = model.Email, Email = model.Email };
