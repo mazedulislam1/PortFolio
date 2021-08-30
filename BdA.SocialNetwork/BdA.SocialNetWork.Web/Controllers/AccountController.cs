@@ -1,4 +1,5 @@
 ﻿using BdA.SocialNetwork.Web.Models;
+using BdA.SocialNetWork.Core.Entities;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
@@ -16,14 +17,14 @@ namespace BdA.SocialNetwork.Web.Controllers
 {
     public class AccountController : Controller
     {
-        private readonly SignInManager<IdentityUser> _signInManager;
-        private readonly UserManager<IdentityUser> _userManager;
+        private readonly SignInManager<ExtendedUser> _signInManager;
+        private readonly UserManager<ExtendedUser> _userManager;
         private readonly ILogger<AccountController> _logger;
         private readonly IEmailSender _emailSender;
 
         public AccountController(
-            UserManager<IdentityUser> userManager,
-            SignInManager<IdentityUser> signInManager,
+            UserManager<ExtendedUser> userManager,
+            SignInManager<ExtendedUser> signInManager,
             ILogger<AccountController> logger,
             IEmailSender emailSender)
         {
@@ -106,7 +107,7 @@ namespace BdA.SocialNetwork.Web.Controllers
 
             if (ModelState.IsValid)
             {
-                var user = new IdentityUser { UserName = model.Email, Email = model.Email };
+                var user = new ExtendedUser { UserName = model.Email, Email = model.Email };
                 var result = await _userManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {

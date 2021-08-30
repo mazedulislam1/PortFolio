@@ -3,8 +3,10 @@
 }
 
 @using Microsoft.AspNetCore.Identity
-@inject SignInManager<IdentityUser> SignInManager
-@inject UserManager<IdentityUser> UserManager
+@using BdA.SocialNetWork.Core.Entities
+
+@inject SignInManager<ExtendedUser> SignInManager
+@inject UserManager<ExtendedUser> UserManager
 
 @if (SignInManager.IsSignedIn(User))
 {
@@ -22,7 +24,7 @@
                     <div class="modal-dialog modal-lg">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                                <h5 class="modal-title" id="exampleModalLabel">Post Status</h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
@@ -30,7 +32,7 @@
                             <div class="modal-body">
                                 <form>
                                     <div class="form-group">
-                                        <label for="message-text" class="col-form-label">Message:</label>
+                                        <label for="message-text" class="col-form-label">Description:</label>
                                         <textarea class="form-control" id="message-text"></textarea>
                                     </div>
                                 </form>
@@ -42,8 +44,7 @@
                                     </label>
                                     <input id="file-input" type="file" />
                                 </span>
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Send message</button>
+                                <button type="button" class="btn btn-primary">Post</button>
                             </div>
                         </div>
                     </div>

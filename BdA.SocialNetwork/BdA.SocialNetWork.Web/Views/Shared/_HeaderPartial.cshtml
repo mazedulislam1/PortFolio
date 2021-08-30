@@ -1,7 +1,9 @@
 ﻿
 @using Microsoft.AspNetCore.Identity
-@inject SignInManager<IdentityUser> SignInManager
-@inject UserManager<IdentityUser> UserManager
+@using BdA.SocialNetWork.Core.Entities
+
+@inject SignInManager<ExtendedUser> SignInManager
+@inject UserManager<ExtendedUser> UserManager
 
 
 <div class="header-content">
@@ -13,25 +15,25 @@
             <div class="col-lg-6 order-2 d-flex justify-content-end">
                 @if (SignInManager.IsSignedIn(User))
                 {
-                    <div class="nav-signed-in-right">
-                        <ul class="top-nav-right">
-                            <li>
-                                <a href="index.html">Profile</a>
-                            </li>
-                            <li>
-                                <form class="form-inline" asp-controller="Account" asp-action="Logout"
-                                      asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })"
-                                      method="post">
-                                    <button type="submit" class="nav-link btn btn-link text-white">Logout</button>
-                                </form>
-                            </li>
-                        </ul>
-                    </div>
+                <div class="nav-signed-in-right">
+                    <ul class="top-nav-right">
+                        <li>
+                            <a href="index.html">Profile</a>
+                        </li>
+                        <li>
+                            <form class="form-inline" asp-controller="Account" asp-action="Logout"
+                                  asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })"
+                                  method="post">
+                                <button type="submit" class="nav-link btn btn-link text-white">Logout</button>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
                 }
 
                 else
                 {
-                    <partial name="_LoginPartial.cshtml" />
+                <partial name="_LoginPartial.cshtml" />
                 }
             </div>
         </div>

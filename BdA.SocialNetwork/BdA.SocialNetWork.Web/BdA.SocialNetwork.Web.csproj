@@ -11,6 +11,7 @@
     <Compile Remove="Areas\Identity\Pages\Account\Login.cshtml.cs" />
     <Compile Remove="Areas\Identity\Pages\Account\Logout.cshtml.cs" />
     <Compile Remove="Areas\Identity\Pages\Account\Register.cshtml.cs" />
+    <Compile Remove="Data\ApplicationDbContext2.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -67,6 +68,10 @@
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
     <PackageReference Include="Serilog.AspNetCore" Version="4.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BdA.SocialNetWork.Core\BdA.SocialNetWork.Core.csproj" />
   </ItemGroup>
 
 </Project>

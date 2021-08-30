@@ -1,4 +1,5 @@
 using BdA.SocialNetwork.Data;
+using BdA.SocialNetWork.Core.Entities;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -31,7 +32,8 @@ namespace BdA.SocialNetwork
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
 
-            services.AddIdentity<IdentityUser, IdentityRole>(options =>
+            //services.AddDefaultIdentity<User>();
+            services.AddIdentity<ExtendedUser, IdentityRole>(options =>
                 options.SignIn.RequireConfirmedAccount = false)
                     .AddEntityFrameworkStores<ApplicationDbContext>()
                     .AddDefaultTokenProviders()
