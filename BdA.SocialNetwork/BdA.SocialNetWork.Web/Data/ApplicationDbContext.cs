@@ -8,7 +8,7 @@ using System.Text;
 
 namespace BdA.SocialNetwork.Data
 {
-    public class ApplicationDbContext : IdentityDbContext<ExtendedUser>
+    public class ApplicationDbContext : IdentityDbContext<SocialUser>
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)

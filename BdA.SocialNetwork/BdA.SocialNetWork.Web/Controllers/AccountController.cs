@@ -17,14 +17,14 @@ namespace BdA.SocialNetwork.Web.Controllers
 {
     public class AccountController : Controller
     {
-        private readonly SignInManager<ExtendedUser> _signInManager;
-        private readonly UserManager<ExtendedUser> _userManager;
+        private readonly SignInManager<SocialUser> _signInManager;
+        private readonly UserManager<SocialUser> _userManager;
         private readonly ILogger<AccountController> _logger;
         private readonly IEmailSender _emailSender;
 
         public AccountController(
-            UserManager<ExtendedUser> userManager,
-            SignInManager<ExtendedUser> signInManager,
+            UserManager<SocialUser> userManager,
+            SignInManager<SocialUser> signInManager,
             ILogger<AccountController> logger,
             IEmailSender emailSender)
         {
@@ -107,7 +107,7 @@ namespace BdA.SocialNetwork.Web.Controllers
 
             if (ModelState.IsValid)
             {
-                var user = new ExtendedUser { UserName = model.Email, Email = model.Email };
+                var user = new SocialUser { UserName = model.Email, Email = model.Email };
                 var result = await _userManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {

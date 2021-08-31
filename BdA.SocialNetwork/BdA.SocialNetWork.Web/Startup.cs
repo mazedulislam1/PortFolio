@@ -28,12 +28,14 @@ namespace BdA.SocialNetwork
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            var connectionString = Configuration.GetConnectionString("DefaultConnection") ;
+            var migrationAssemblyName = typeof(Startup).Assembly.FullName;
+
             services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(
-                    Configuration.GetConnectionString("DefaultConnection")));
+                options.UseSqlServer(connectionString,m => m.MigrationsAssembly(migrationAssemblyName)));
 
             //services.AddDefaultIdentity<User>();
-            services.AddIdentity<ExtendedUser, IdentityRole>(options =>
+            services.AddIdentity<SocialUser, IdentityRole>(options =>
                 options.SignIn.RequireConfirmedAccount = false)
                     .AddEntityFrameworkStores<ApplicationDbContext>()
                     .AddDefaultTokenProviders()

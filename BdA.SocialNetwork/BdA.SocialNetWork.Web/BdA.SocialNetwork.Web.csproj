@@ -12,6 +12,8 @@
     <Compile Remove="Areas\Identity\Pages\Account\Logout.cshtml.cs" />
     <Compile Remove="Areas\Identity\Pages\Account\Register.cshtml.cs" />
     <Compile Remove="Data\ApplicationDbContext2.cs" />
+    <Compile Remove="Data\Migrations\20210830232752__severalColumnAddedToSocialUser.cs" />
+    <Compile Remove="Data\Migrations\20210830232752__severalColumnAddedToSocialUser.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
