@@ -1,4 +1,7 @@
+using Autofac;
 using BdA.SocialNetwork.Data;
+using BdA.SocialNetWork.Core;
+using BdA.SocialNetWork.Core.Contexts;
 using BdA.SocialNetWork.Core.Entities;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -21,30 +24,35 @@ namespace BdA.SocialNetwork
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+            connectionString = Configuration.GetConnectionString("DefaultConnection");
+            migrationAssemblyName = typeof(Startup).Assembly.FullName;
         }
 
         public IConfiguration Configuration { get; }
 
+        private readonly string connectionString;
+        private readonly string migrationAssemblyName;
+
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            var connectionString = Configuration.GetConnectionString("DefaultConnection") ;
-            var migrationAssemblyName = typeof(Startup).Assembly.FullName;
-
             services.AddDbContext<ApplicationDbContext>(options =>
+                options.UseSqlServer(connectionString,m => m.MigrationsAssembly(migrationAssemblyName)));
+
+            services.AddDbContext<SocialContext>(options =>
                 options.UseSqlServer(connectionString,m => m.MigrationsAssembly(migrationAssemblyName)));
 
             //services.AddDefaultIdentity<User>();
             services.AddIdentity<SocialUser, IdentityRole>(options =>
                 options.SignIn.RequireConfirmedAccount = false)
-                    .AddEntityFrameworkStores<ApplicationDbContext>()
+                    .AddEntityFrameworkStores<SocialContext>()
                     .AddDefaultTokenProviders()
                     .AddDefaultUI();
 
             services.AddControllersWithViews();
             services.AddRazorPages();
             services.AddEntityFrameworkSqlServer();
-
+            services.AddOptions();
 
             services.Configure<IdentityOptions>(options =>
             {
@@ -89,6 +97,14 @@ namespace BdA.SocialNetwork
 
             services.AddMvc(options => options.EnableEndpointRouting = false);
 
+        }
+
+        public void ConfigureContainer(ContainerBuilder builder)
+        {
+            // Register your own things directly with Autofac here. Don't
+            // call builder.Populate(), that happens in AutofacServiceProviderFactory
+            // for you.
+            builder.RegisterModule(new CoreModule(Configuration,connectionString,migrationAssemblyName));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
