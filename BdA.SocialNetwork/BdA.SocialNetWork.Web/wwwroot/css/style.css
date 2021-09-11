@@ -1622,12 +1622,14 @@ td.email-box span {
 tr.login-tr-area .form-control {
     height: calc(1.5em + .75rem + 2px);
     padding: 7px .75rem;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 300;
     line-height: 0.5;
     margin-right: 71px;
 }
-
+tr.login-tr-area td > div > button {
+    font-size: 13px;
+}
 .world-map-area {
     position: relative;
 }

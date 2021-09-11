@@ -11,8 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Services\" />
-    <Folder Include="Repositories\" />
+    <ProjectReference Include="..\BdA.SocialNetWork.Data\BdA.SocialNetWork.Data.csproj" />
   </ItemGroup>
 
 </Project>

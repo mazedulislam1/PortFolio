@@ -3,6 +3,7 @@ using BdA.SocialNetwork.Data;
 using BdA.SocialNetWork.Core;
 using BdA.SocialNetWork.Core.Contexts;
 using BdA.SocialNetWork.Core.Entities;
+using BdA.SocialNetWork.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -104,6 +105,7 @@ namespace BdA.SocialNetwork
             // Register your own things directly with Autofac here. Don't
             // call builder.Populate(), that happens in AutofacServiceProviderFactory
             // for you.
+            builder.RegisterModule(new DataModule(Configuration,connectionString,migrationAssemblyName));
             builder.RegisterModule(new CoreModule(Configuration,connectionString,migrationAssemblyName));
         }
 

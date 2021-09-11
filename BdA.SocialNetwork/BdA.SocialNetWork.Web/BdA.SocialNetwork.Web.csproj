@@ -78,6 +78,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BdA.SocialNetWork.Core\BdA.SocialNetWork.Core.csproj" />
+    <ProjectReference Include="..\BdA.SocialNetWork.Data\BdA.SocialNetWork.Data.csproj" />
   </ItemGroup>
 
   <ItemGroup>
