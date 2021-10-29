@@ -1,4 +1,5 @@
 using Autofac;
+using Autofac.Extensions.DependencyInjection;
 using BdA.SocialNetwork.Data;
 using BdA.SocialNetWork.Core;
 using BdA.SocialNetWork.Core.Contexts;
@@ -30,6 +31,7 @@ namespace BdA.SocialNetwork
         }
 
         public IConfiguration Configuration { get; }
+        public static ILifetimeScope AutofacContainer { get; private set; }
 
         private readonly string connectionString;
         private readonly string migrationAssemblyName;
@@ -107,11 +109,13 @@ namespace BdA.SocialNetwork
             // for you.
             builder.RegisterModule(new DataModule(Configuration,connectionString,migrationAssemblyName));
             builder.RegisterModule(new CoreModule(Configuration,connectionString,migrationAssemblyName));
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            AutofacContainer = app.ApplicationServices.GetAutofacRoot();
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

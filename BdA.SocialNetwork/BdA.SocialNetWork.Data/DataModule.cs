@@ -23,6 +23,15 @@ namespace BdA.SocialNetWork.Data
         protected override void Load(ContainerBuilder builder)
         {
             //builder.RegisterType<Repository,IRepository>();
+            //builder.RegisterGeneric(typeof(Repository<>)).AsSelf();
+            builder
+                .RegisterGeneric(typeof(Repository<>))
+                .As(typeof(IRepository<>))
+                .InstancePerDependency();
+            builder
+                .RegisterGeneric(typeof(UnitOfWork<>))
+                .As(typeof(IUnitOfWork<>))
+                .InstancePerDependency();
             base.Load(builder);
         }
     }

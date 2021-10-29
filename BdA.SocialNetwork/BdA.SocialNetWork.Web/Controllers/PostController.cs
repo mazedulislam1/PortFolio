@@ -1,4 +1,7 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using BdA.SocialNetwork.Web.Models;
+using BdA.SocialNetWork.Core.Entities;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -7,8 +10,15 @@ using System.Threading.Tasks;
 
 namespace BdA.SocialNetwork.Web.Controllers
 {
+
     public class PostController : Controller
     {
+        private readonly UserManager<SocialUser> _userManager;
+
+        public PostController(UserManager<SocialUser> userManager)
+        {
+            _userManager = userManager;
+        }
         // GET: PostController
         public ActionResult Index()
         {
@@ -21,11 +31,22 @@ namespace BdA.SocialNetwork.Web.Controllers
             return View();
         }
 
-        // GET: PostController/Create
-        public ActionResult Create()
+        [HttpPost]
+        [Route("Post/create")]
+        public async Task<ActionResult> Create(UserPostModel model)
         {
-            return View();
+            //Request.QueryString
+            var user = await _userManager.GetUserAsync(User);
+            model.UserId = user.Id;
+            if (ModelState.IsValid)
+            {
+                model.CreatePost();
+            }
+            
+            return RedirectToAction("Index", "Home");
         }
+
+
 
         // POST: PostController/Create
         [HttpPost]

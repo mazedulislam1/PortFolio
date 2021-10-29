@@ -17,7 +17,12 @@ namespace BdA.SocialNetWork.Core.Services
 
         public void AddPost(Post post)
         {
-            _unitOfWork.PostRepository.Add(post);
+            _unitOfWork.PostRepository.Add(new Post
+            {
+                Body = post.Body,
+                UserId = post.UserId
+            });
+            _unitOfWork.Save();
         }
 
         public void DeletePost(Post post)

@@ -14,5 +14,10 @@ namespace BdA.SocialNetWork.Core.Entities
 
         public string UserId { get; set; }
         public SocialUser User { get; set; }
+
+        public Post()
+        {
+            PostImages = new List<PostImage>();
+        }
     }
 }

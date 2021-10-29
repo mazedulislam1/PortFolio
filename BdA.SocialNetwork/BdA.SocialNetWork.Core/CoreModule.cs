@@ -1,5 +1,8 @@
 ﻿using Autofac;
 using BdA.SocialNetWork.Core.Contexts;
+using BdA.SocialNetWork.Core.Repositories;
+using BdA.SocialNetWork.Core.Services;
+using BdA.SocialNetWork.Core.UnitOfWorks;
 using Microsoft.Extensions.Configuration;
 
 namespace BdA.SocialNetWork.Core
@@ -28,6 +31,19 @@ namespace BdA.SocialNetWork.Core
                    .WithParameter("connectionString", connectionString)
                    .WithParameter("migrationAssemblyName", migrationAssemblyName)
                    .InstancePerLifetimeScope();
+
+            builder.RegisterType<PostUnitOfWork>().As<IPostUnitOfWork>()
+                   .WithParameter("connectionString", connectionString)
+                   .WithParameter("migrationAssemblyName", migrationAssemblyName)
+                   .InstancePerLifetimeScope();
+
+            builder.RegisterType<PostRepository>().As<IPostRepository>()
+                .InstancePerLifetimeScope();
+
+            builder.RegisterType<PostService>().As<IPostService>()
+                .InstancePerLifetimeScope();
+            builder.RegisterBuildCallback(c => c.Resolve<IPostService>());
+
             base.Load(builder);
         }
     }
